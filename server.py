@@ -7,6 +7,14 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server = ''
 port = 5555
 
+hostname = socket.gethostname()
+
+ip = socket.gethostbyname_ex(hostname)
+ip1 = socket.gethostbyname(hostname)
+
+print("IP: " + str(ip) + " HOSTNAME: " + str(hostname))
+print("1: " + ip1)
+
 server_ip = socket.gethostbyname(server)
 
 try:
